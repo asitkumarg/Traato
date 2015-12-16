@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Traato</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  <script src="angular.min.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="myTraato" ng-controller="MyController">
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h1>Know Your Grocer</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h3 class="subh2">Browse By Categories</h3>
+                </div>
+            </div>
+     
+       
+            <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-2">
+            <div class="input-group input-group-lg">
+                                   <span class="input-group-btn">
+                  <button type="button" class = "btn btn-primary dropdown-toggle" data-toggle = "dropdown">Bangalore</button>
+
+                   </span>
+                 <input type="text" class="form-control" ng-model="search" placeholder="Enter area pin code...">
+                 
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Search</button>
+                   </span>
+             </div>
+             </div>
+       
+       
+       
+
+      </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <h6 class="subh6">Turn Filter on and off your result will updates autometically</h6>
+                </div>
+            </div>
+        </div><br>
+        <div class="container container1">
+            <div class="row">
+                <div class="col-md-1 col-sm-1 col-lg-1" >
+                    <a class="btn btn-success btn1" type="button"  ng-click="ShowHideRanges()" ng-class="{blue: isSelectedRange}">
+                        <i class="fa fa-inr fa-3x "></i>
+                    </a><br><h6 class="text-center">Price Range</h6>
+
+                </div>
+                <div class="col-md-1 col-sm-1 col-lg-1 ">
+                    <a class="btn btn-success btn1" ng-click="ShowHidePayments()"  ng-class="{blue: isSelectedpayment}">
+                        <i class="fa fa-money fa-3x"></i>
+                    </a><br><h6 class="text-center">Payment Option</h6>
+
+                </div>
+                <div class="col-md-1 col-sm-1 col-lg-1">
+                    <a class="btn btn-success btn1" ng-click="ShowHideCuisines()"  ng-class="{blue: isSelectedCuisine}">
+                        <i class="fa fa-cutlery fa-3x"></i>
+                    </a><br><h6 class="text-center">Cuisine</h6>
+
+                </div>
+                <div class="col-md-1 col-sm-1 col-lg-1 ">
+                    <a class="btn btn-success btn1" ng-click="ShowHideDiscounts()"  ng-class="{blue: isSelectedDiscount}">
+                        <i class="fa fa-gift fa-3x"></i>
+                    </a><br><h6 class="text-center">Discount</h6>
+
+                </div>
+                <div class="col-md-1 col-sm-1 col-lg-1 ">
+                    <a class="btn btn-success btn1" ng-click="ShowHideOrderplacing()"  ng-class="{blue: isSelectedOrderPlacing }">
+                        <i class="fa fa-desktop fa-3x"></i>
+                    </a><br><h6 class="text-center">Order placing</h6>
+
+                </div>
+                <div class="col-md-1 col-sm-1 col-lg-1 ">
+                    <a class="btn btn-success btn1" ng-click="ShowHideHealthProduct()"  ng-class="{blue: isSelectedHealthProduct}">
+                        <i class="fa fa-heart fa-3x"></i>
+                    </a><br><h6 class="text-center">Health product</h6>
+
+                </div>
+                <div class="col-md-1 col-sm-1 col-lg-1 ">
+                    <a class="btn btn-success btn1" ng-click="ShowHideDeliveryCharge()" ng-class="{blue: isSelectedDeliveryCharge}">
+                        <i class="fa fa-cart-plus fa-3x"></i>
+                    </a><br><h6 class="text-center">Delivery Charge</h6>
+
+                </div>
+                <div class="col-md-1 col-sm-1 col-lg-1">
+                    <a class="btn btn-success btn1" ng-click="ShowHideHouseHold()"  ng-class="{blue: isSelectedHouseHold}" >
+                        <i class="fa fa-home fa-3x"></i>
+                    </a><br><h6 class="text-center">Household</h6>
+
+                </div>
+                <div class="col-md-1 col-sm-1 col-lg-1">
+                    <a class="btn btn-success btn1" ng-click="ShowHide()" >
+                        <i class="fa fa-bar-chart fa-3x text-center"></i>
+                    </a><br><h6 class="text-center">Product Range</h6>
+
+                </div>
+                <div class="col-md-1 col-sm-1 col-lg-1">
+                    <a class="btn btn-success btn1" ng-click="ShowHideOthers()"  ng-class="{blue: isSelectedOthers}" >
+                        <i class="fa fa-th-list fa-3x"></i>
+                    </a><br><h6 class="text-center">Others</h6>
+
+                </div>
+                <div class="col-md-1 col-sm-1 col-lg-1">
+                    <a class="btn btn-success btn1" ng-click="ShowHide()" >
+                        <i class="fa fa-th-list fa-3x"></i>
+                    </a><br><h6 class="text-center">Others</h6>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container container1">
+         <div class="row">
+            <div class="col-md-12">
+                <div id="" class="list-group" >
+
+                  <ul class="list-inline">
+                     <li ng-hide="IsHiddenPayment" ng-repeat="payment in ocww.payments" ><button class="btn btn-danger btn2"><img class="img img-responsive img-center" ng-src="{{payment.url}}"> {{payment.option}}</button></li>
+
+                     <li ng-hide="IsHiddenRange" ng-repeat="pricerange in ocw.priceranges" ><button class="btn btn-info btn2"><img class="img img-responsive img-center" ng-src="{{pricerange.url}}"> {{pricerange.range}}</button></li>
+
+                     <li ng-hide="IsHiddenCuisine"  ng-repeat="cuisine in ocwww.cuisines" ><button class="btn btn-primary btn2"><img class="img img-responsive img-center" ng-src="{{cuisine.url}}"> {{cuisine.name}}</button></li>
+
+                     <li ng-hide="IsHiddenDiscount" ng-repeat="discount in ocwwww.discounts" ><button class="btn btn-default btn2"><img class="img img-responsive img-center" ng-src="{{discount.url}}"> {{discount.range}}</button></li>
+
+                     <li ng-hide="IsHiddenOrderPlacing" ng-repeat="orderplacing in ocwwwww.orderplacings" ><button class="btn btn-success btn2"><img class="img img-responsive img-center " ng-src="{{orderplacing.url}}"> {{orderplacing.through}}</button></li>  
+
+                     <li ng-hide="IsHiddenHealthProduct" ng-repeat="healthproduct in call.healthproducts" ><button class="btn btn-success healthbtn"><img class="img img-responsive img-center " ng-src="{{healthproduct.url}}">{{healthproduct.item}}</button></li>
+
+                     <li ng-hide="IsHiddenDeliveryCharge" ng-repeat="delivercharge in calll.delivercharges" >{{delivercharge.condition}}</li>
+
+                     <li ng-hide="IsHiddenHouseHold" ng-repeat="household in callll.households" ><button class="btn btn-warning btn2"><img class="img img-responsive img-center" ng-src="{{household.url}}"> {{household.item}}</button></li>
+
+                     <li ng-hide="IsHiddenOthers" ng-repeat="other in cals.others" ><button class="btn btn-warning otherbtn"><img class="img img-responsive img-center" ng-src="{{other.url}}"> {{other.item}}</button></li>
+                  </ul>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="jumbotron">
+            <div class="row">
+              <div class="col-md-12 col-sm-12">
+                <h2 class="text-center">Results</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container container1">
+          <div class="row">
+            <div class="col-md-12">
+              <div >
+                 <div  class="col-md-3 col-lg-3-3 col-xs-3 col-sm-3" ng-repeat="row in deals | filter :{pin:search}"><h4 class="text-center">{{row.gname}}</h4>
+                 <img class="img img-responsive img-center"  ng-src="{{row.url}}"></div> 
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    </div>
+</body>
+</html>

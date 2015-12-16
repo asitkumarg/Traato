@@ -1,0 +1,95 @@
+@media (min-width: 1200px) {
+    .container1{
+        max-width: 900px;
+    }
+}
+.fa-inr:hover{
+	color: #4dffff;
+    
+}
+.fa-money:hover {
+    color: #4dffff;
+}
+.fa-cutlery:hover {
+    color:  #4dffff;
+}
+.fa-gift:hover {
+    color: #4dffff;
+}
+.fa-desktop:hover {
+    color:  #4dffff;
+}
+.fa-heart:hover {
+    color: #4dffff;
+}
+.fa-cart-plus:hover {
+    color: #4dffff;
+}
+.fa-home:hover {
+    color: #4dffff;
+}
+.fa-bar-chart:hover {
+    color: #4dffff;
+}
+.fa-money:hover {
+    color:  #4dffff;
+}
+.fa-th-list:hover {
+    color:  #4dffff;
+}
+.subh2{
+	color: #cc8800;
+}
+.subh6{
+	color: #739900;
+}
+.btn1{
+	
+	width: 70px;
+	background-color: #b2d233;
+}
+.list-inline1{
+    padding: 20px;
+    background-color: grey;
+}
+.btn2{
+    margin-bottom: 10px;
+}
+.img-center {margin:0 auto;}
+.btn-default{
+    background-color: #43A795;
+}
+
+.jumbotron{
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #00B9F5!important;
+}
+
+.selectcity{
+    height: 0px;
+    width: 70px;
+}
+a.blue{
+    background-color:   #004d00;
+}
+.otherbtn{
+    background-color:#2ACCBD;
+    border-color:#2ACCBD;
+     margin-bottom: 10px;
+}
+.otherbtn:hover{
+    background-color:#1A796C;
+    border-color:#1A796C;
+}
+
+.healthbtn{
+    background-color: rgba(56, 103, 72, 0.79);;
+    border-color:rgba(56, 103, 72, 0.79);;
+     margin-bottom: 10px;
+}
+.healthbtn:hover{
+    background-color:rgba(25, 70, 40, 0.83);
+    border-color:rgba(25, 70, 40, 0.83);
+}
+
